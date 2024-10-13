@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Service Requests</title>
+</head>
+<body>
+    <h1>Your Service Requests</h1>
+    <ul>
+        {% for request in requests %}
+            <li>{{ request }}</li>
+        {% empty %}
+            <li>No service requests found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'submit_request' %}">Submit a New Request</a>
+</body>
+</html>
